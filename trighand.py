@@ -19,7 +19,7 @@ blurValue = 41  # GaussianBlur parameter
 bgSubThreshold = 50
 learningRate = 0
 pygame.init()
-screen=pygame.display.set_mode((int(cap_region_y_end * 480),640-int(cap_region_x_begin * 640)))
+screen=pygame.display.set_mode([1000,100])
 running=True
 screen.fill((0,0,0))
 click=False
@@ -69,6 +69,8 @@ while camera.isOpened() and running:
     threshold = cv2.getTrackbarPos('trh1', 'trackbar')
     frame = cv2.bilateralFilter(frame, 5, 50, 100)  # smoothing filter
     frame = cv2.flip(frame, 1)  # flip the frame horizontally
+    xlimit=frame.shape[1]-cap_region_x_begin * frame.shape[1]
+    ylimit=cap_region_y_end * frame.shape[0]
     cv2.rectangle(frame, (int(cap_region_x_begin * frame.shape[1]), 0),
                  (frame.shape[1], int(cap_region_y_end * frame.shape[0])), (255, 0, 0), 2)
    # cv2.imshow('original', frame)
@@ -116,9 +118,12 @@ while camera.isOpened() and running:
             cv2.circle(imager, pos_prev, 3, (255,0,0), 3)
             if  pos_prev is not None:       
                 if(abs(pos_prev[0]-pos_next[0])<=50 and abs(pos_prev[1]-pos_next[1])<=50):
+                    orig=(int(pos_prev[0]*1000/xlimit),int(pos_prev[1]*1000/ylimit))
+                    end=(int(pos_next[0]*1000/xlimit),int(pos_next[1]*1000/ylimit))
                     pygame.draw.line(screen,(255,255,255),pos_prev,pos_next,2)
                     pos_prev=pos_next
             else:
+                end=(int(pos_next[0]*1000/xlimit),int(pos_next[1]*1000/ylimit))
                 pygame.draw.line(screen,(255,255,255),pos_next,pos_next,2)
                 pos_prev=pos_next
         print(pos_prev)        
