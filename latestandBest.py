@@ -169,7 +169,7 @@ while camera.isOpened() and running:
                 pos_next=tuple(hull[pos][0])
                 cv2.circle(drawing, pos_next, 3, (255,255,255), 3)
                 if  pos_prev is not None:
-                    pygame.draw.rect(canvas, (128,128,128), (pos_prev[0]*1000/newx,pos_prev[1]*1000/newy,10,10))       
+                    pygame.draw.rect(canvas, (128,128,128), (pos_prev[0]*1000/newx,pos_prev[1]*1000/newy,15,15))       
                     screen.blit(canvas, (0, 0))
                     canvas.fill((255,255,255))    
                     if(abs(pos_prev[0]-pos_next[0])<=100 and abs(pos_prev[1]-pos_next[1])<=100): 
