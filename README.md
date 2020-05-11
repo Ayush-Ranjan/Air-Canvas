@@ -75,8 +75,8 @@ If everything works fine then you can proceed with our code.
 ## Team
 
 Our team comprised of two members from Team ERA, IIT Kanpur namely:
-    1. Ayush Ranjan
-    2. Sidhartha Watsa
+* Ayush Ranjan
+* Sidhartha Watsa
 
 ## Bibliography
 
