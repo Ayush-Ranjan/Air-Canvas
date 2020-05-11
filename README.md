@@ -48,6 +48,10 @@ If everything works fine then you can proceed with our code.
 
 ### Concepts
 
+#### Finger Tip Detection
+
+#### Pygame Drawing
+
 ### Additional Features
 
 ## Contributing
