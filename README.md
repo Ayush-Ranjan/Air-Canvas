@@ -52,7 +52,15 @@ If everything works fine then you can proceed with our code.
 
 #### Pygame Drawing
 
+Pygame is an amazing library that allows us to build small gui where in we can draw anything, insert images, vedios, icons and so on. It constantly loops over the gui's screen and thus through simple logical code, we can easily make our drawings move in some particular pattern. It defines a term 'event' which basically refers to any activity done by the mouse or keypad. Thus we can easily encorporate various basic features like mouse clicks, key press, etc. We can draw numerous shapes using very easy functions provided in this module.
+Having done the finger tip detection, now we know two coordinates, the current and the previous one, and these are enough to draw a line between them using the ```pygame.draw.line()``` function using the values of the selected color and thickness. This process iterates over frames and we see a continuos line drawn on the pygame screen.
+
 ### Additional Features
+
+Besides simply drawing, we have also encorporated various other features like 
+* Color changing using various keys on the keyboard
+* Changing the thickness of the line drawn using the trackbar window
+* Icon of a small pen that points the current position of your fingers tip on the imaginary 2D surface of air.
 
 ## Contributing
 
@@ -78,11 +86,12 @@ If everything works fine then you can proceed with our code.
 
 ## Team
 
-Our team comprised of two members from Team ERA, IIT Kanpur namely:
+Our team comprised two members from Team ERA, IIT Kanpur namely:
 * Ayush Ranjan
 * Sidhartha Watsa
 
 ## Bibliography
+
 
 
 
