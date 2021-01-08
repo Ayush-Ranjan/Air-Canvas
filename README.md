@@ -44,11 +44,11 @@ import pygame
 ```
 If everything works fine then you can proceed with our code.
 
-### Setup
-
-### Concepts
-
 #### Finger Tip Detection
+The fingertip detection was the first part in the process of making the AIR CANVAS.
+Manual fingertip detection is done in several steps. This included background
+subtraction with histogram backprojection for skin detection and then use of a convex hull on the contour with
+maximum area in the masked image.
 
 #### Pygame Drawing
 
@@ -89,13 +89,6 @@ Our team comprised two members from Team ERA, IIT Kanpur namely:
 * Ayush Ranjan
 * Sidhartha Watsa
 
-## Bibliography
-
-
-
-
 ## Acknowledgments
 
 * We got extensive support and mootivation from the Team ERA-IITK and we are very grateful to them for giving us this opportunity.
-* 
-* 
